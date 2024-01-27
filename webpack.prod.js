@@ -16,6 +16,15 @@ const devConfig = {
     module: {
         rules: [
             {
+            test: /\.(ts|js)x?$/,
+            exclude: /node_modules/,
+            use: [
+              {
+                loader: 'babel-loader'
+              }
+            ]
+          },
+            {
             test: /\.(scss|css)$/,
             use: [
                 MiniCssExtractPlugin.loader, //3. Extract css into files
