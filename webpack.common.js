@@ -5,7 +5,7 @@ module.exports = {
     entry: './src/index.tsx',
     resolve: {
         modules: [__dirname, "src","node_modules"],
-        extensions: ["*", ".js", ".jsx", ".tsx", ".ts"],
+        extensions: [".*", ".js", ".jsx", ".tsx", ".ts"],
     },
     module: {
         rules: [
@@ -18,6 +18,12 @@ module.exports = {
               }
             ]
           },
+            {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: 'url-loader',
+        },
+      },
           {
             test: /\.(svg|jpg|png|gif|webp|)$/,
             type: 'asset/resource'
