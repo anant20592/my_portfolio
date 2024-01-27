@@ -18,6 +18,12 @@ module.exports = {
               }
             ]
           },
+            {
+        test: /\.(jpg|png)$/,
+        use: {
+          loader: 'url-loader',
+        },
+      },
           {
             test: /\.(svg|jpg|png|gif|webp|)$/,
             type: 'asset/resource'
