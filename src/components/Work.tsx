@@ -12,14 +12,14 @@ const Work = () => {
       {projects.map((project) => (
         <div className="project-preview" key={project.title}>
           <figure className="project-preview__media">
-            <a href={project["detail-url"]} target="_blank">
+{/*             <a href={project["detail-url"]} target="_blank">
               <img
                 width="752"
                 height="833"
                 src={project.img}
                 alt="Screenshot of Cazz Photography"
               />
-            </a>
+            </a> */}
           </figure>
           <div className="project-preview__content">
             <h2 className="project-preview__title">
